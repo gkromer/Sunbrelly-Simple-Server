@@ -28,7 +28,7 @@ public class SignalController {
      */
     @RequestMapping(value = "/postMsg", method = RequestMethod.POST)
     public String postMsg(@RequestBody SignalDto msg) {
-        logger.log(Level.INFO, "Signal received = " + msg.getMsg());
+        logger.log(Level.INFO, "Message received = " + msg.getMsg());
         return msg.getMsg();
     }
 
