@@ -18,10 +18,18 @@ public class SignalController {
      * @return: receives and returns a signal
      */
     @RequestMapping(value = "/postSignal", method = RequestMethod.POST)
-    public int sayHello(@RequestBody SignalDto signal) {
+    public int postSignal(@RequestBody SignalDto signal) {
         logger.log(Level.INFO, "Signal received = " + signal.getSignal());
         return signal.getSignal();
     }
 
+    /**
+     * @return: receives and returns a msg
+     */
+    @RequestMapping(value = "/postMsg", method = RequestMethod.POST)
+    public String postMsg(@RequestBody SignalDto msg) {
+        logger.log(Level.INFO, "Signal received = " + msg.getMsg());
+        return msg.getMsg();
+    }
 
 }
